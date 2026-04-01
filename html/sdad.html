@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- <link rel="stylesheet" href="./resource/css/style.css" /> -->
+    <style>
+      body {
+        margin: 0 au;
+      }
+      header {
+        background-color: navy;
+        color: rgb(245, 234, 234);
+        text-align: center;
+        padding: 20px;
+      }
+      nav {
+        background-color:rgb(134, 134, 131);
+        padding: 15px;
+        text-align: center;
+      }
+
+      h1 {
+        margin: 0;
+      }
+
+      .container {
+        display: flex;
+        padding: 20px;
+        gap: 20px;
+
+      }
+
+      main{
+        flex: 3;  
+        background-color: rgb(184, 219, 239);
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      main > section{
+        color: blueviolet;
+      }
+
+      aside {
+        flex: 1;
+        background-color: rgb(246, 205, 231);
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      .gallery{
+        display: grid;
+        /*grid-template-columns: repeat(3, 1fr);*/
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+      }
+
+      .photo{
+        background-color: rgb(39, 38, 38);
+        text-align: center;
+        border-radius: 5px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>MY WEB PAGE</h1>
+    </header>
+    
+    <nav>
+      <a href="a">홈</a> | <a href="a">자기소개</a> | <a href="a">게시판</a> |
+      <a href="a">연락처</a>
+    </nav>
+
+    <div class="container">
+    <main>
+      <section>
+        <img src="./img/codeapple.png" alt="CodeApple" />
+        <h2>자기소개</h2>
+        <p>이름 : 홍길동</p>
+        <p>학과 스마트보안솔루션학과</p>
+        <p><section>취미 : 게임, 음악 감상</section></p>
+
+         <h3>좋아하는 음식</h3>
+        <ul>
+          <li>피자</li>
+          <li>떡볶이</li>
+          <li>치킨</li>
+        </ul>
+      </section>
+    </main>
+
+      <aside>
+        <h2>나의 자우명</h2>
+        <div>"어제보다 나은 내일이 되자!"</div>
+      
+    </div>
+
+      <aside>
+        <h2>내가 찍은 여행 사진들</h2>
+      <div class="gallery"> 
+       <div calss="photo">사진1</div>
+       <div calss="photo">사진2</div>
+       <div calss="photo">사진3</div>
+       <div calss="photo">사진4</div>
+       <div calss="photo">사진5</div>
+       <div calss="photo">사진6</div>
+       <div calss="photo">사진7</div>
+       <div calss="photo">사진8</div>
+       <divc alss="photo">사진9</div>
+    </div>
+  </aside>
+  </body>
+  <footer>
+    <p>Copyright 2026</p>
+  </footer>
+</html>
