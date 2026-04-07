@@ -7,19 +7,53 @@
 
     <!-- <link rel="stylesheet" href="./resource/css/style.css" /> -->
     <style>
-      body {
-        margin: 0 au;
-      }
+      html,
+     body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    div {
+        background-color: aqua;
+        margin: 5px;
+    }
+
+    #hello {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        display: none;
+    }
+
+    #other {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    button {
+        background-color: aquamarine;
+    }
+      
       header {
         background-color: navy;
-        color: rgb(245, 234, 234);
+        color: white;
         text-align: center;
         padding: 20px;
       }
       nav {
-        background-color:rgb(134, 134, 131);
+        background-color: rgb(206, 204, 204);
         padding: 15px;
         text-align: center;
+      }
+
+      nav a {
+        color: blueviolet;
       }
 
       h1 {
@@ -30,92 +64,105 @@
         display: flex;
         padding: 20px;
         gap: 20px;
-
       }
 
-      main{
-        flex: 3;  
-        background-color: rgb(184, 219, 239);
+      main {
+        flex: 3;
+        background-color: rgb(196, 230, 245);
         padding: 20px;
         border-radius: 10px;
       }
 
-      main > section{
+      main > section {
         color: blueviolet;
       }
-
       aside {
         flex: 1;
-        background-color: rgb(246, 205, 231);
+        background-color: rgb(247, 207, 238);
         padding: 20px;
         border-radius: 10px;
       }
 
-      .gallery{
+      .gallery {
         display: grid;
-        /*grid-template-columns: repeat(3, 1fr);*/
+        /* grid-template-columns: repeat(3, 1fr); */
         grid-template-columns: 1fr 1fr 1fr;
         gap: 10px;
       }
 
-      .photo{
-        background-color: rgb(39, 38, 38);
+      .photo {
+        background-color: rgb(98, 97, 98);
         text-align: center;
         border-radius: 5px;
+        color: white;
       }
-
     </style>
   </head>
+  
   <body>
     <header>
       <h1>MY WEB PAGE</h1>
     </header>
-    
+                     
     <nav>
-      <a href="a">홈</a> | <a href="a">자기소개</a> | <a href="a">게시판</a> |
+      <div href="a" onclick="onView(ture)">홈</div>
+      <a href="a">자기소개</a> | <a href="a">게시판</a> |
       <a href="a">연락처</a>
     </nav>
 
-    <div class="container">
-    <main>
-      <section>
-        <img src="./img/codeapple.png" alt="CodeApple" />
-        <h2>자기소개</h2>
-        <p>이름 : 홍길동</p>
-        <p>학과 스마트보안솔루션학과</p>
-        <p><section>취미 : 게임, 음악 감상</section></p>
+    <div id = "hello">
+      <div>홀리몰리</div>
+      <div>홀리몰리</div>
+    <div  onclick="onView(false)">요기는 없는 부분</div>
+    </div>
 
-         <h3>좋아하는 음식</h3>
-        <ul>
-          <li>피자</li>
-          <li>떡볶이</li>
-          <li>치킨</li>
-        </ul>
-      </section>
-    </main>
+    <div class="container">
+      <main>
+        <section>
+          <h2>자기소개</h2>
+          <p>이름 : 홍길동</p>
+          <p>학과 스마트보안솔루션학과</p>
+
+          <h3>좋아하는 음식</h3>
+          <ul>
+            <li>피자</li>
+            <li>떡볶이</li>
+            <li>치킨</li>
+          </ul>
+        </section>
+        <div><section>취미 : 게임, 음악 감상</section></div>
+      </main>
 
       <aside>
-        <h2>나의 자우명</h2>
-        <div>"어제보다 나은 내일이 되자!"</div>
-      
-    </div>
+        <h2>나의 좌우명</h2>
+        <div >"어제보다 나은 내일이 되자!"</div>
+      </aside>
 
       <aside>
         <h2>내가 찍은 여행 사진들</h2>
-      <div class="gallery"> 
-       <div calss="photo">사진1</div>
-       <div calss="photo">사진2</div>
-       <div calss="photo">사진3</div>
-       <div calss="photo">사진4</div>
-       <div calss="photo">사진5</div>
-       <div calss="photo">사진6</div>
-       <div calss="photo">사진7</div>
-       <div calss="photo">사진8</div>
-       <divc alss="photo">사진9</div>
+        <div class="gallery">
+          <div class="photo">사진1</div>
+          <div class="photo">사진2</div>
+          <div class="photo">사진3</div>
+          <div class="photo">사진4</div>
+          <div class="photo">사진5</div>
+          <div class="photo">사진6</div>
+          <div class="photo">사진7</div>
+          <div class="photo">사진8</div>
+          <div class="photo">사진9</div>
+        </div>
+      </aside>
     </div>
-  </aside>
+
+    <script>
+      function onView() {
+          document.getElementById("hello").style.display = "block";
+      }
+  </script>
   </body>
   <footer>
     <p>Copyright 2026</p>
   </footer>
 </html>
+html0316.html
+3KB

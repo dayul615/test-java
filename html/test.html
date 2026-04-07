@@ -1,13 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <script src="./resource/css/myscript.js"></script>
 </head>
-    <body>
-    <button onclick="myFynction()">김다율</button>
-    </body>
+<style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    div {
+        background-color: aqua;
+        margin: 5px;
+    }
+
+    #hello {
+        background-color: white;
+        display: none;
+    }
+
+    #other {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    button {
+        background-color: aquamarine;
+    }
+</style>
+
+<body>
+    <div id = "hello">
+        <div>홀리몰리</div>
+        <div>홀리몰리</div>
+    </div>
+    <button onclick="onView()">띄우기</button>
+    <div id = "other">요기는 없는 부분</div>
+
+    <script>
+        function onView() {
+            document.getElementById("hello").style.display = "block";
+        }
+    </script>
+</body>
+
 </html>
