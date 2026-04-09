@@ -4,15 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        html,
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+        div{
+            background-color: antiquewhite;
+            margin: 5px;
+        }
+        #hello{
+            display: none;
+        }
+        #other{
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        button{
+            background-color: brown;
+            
+        }
+        .but{
+            float: left;
+        }
+        .X{
+            float: right;
+        }
+    </style>
 </head>
-<body>
-    
-    <h1 id="hello">안녕</h1>
-    <button onclick="revert()">클릭</button>
-<script>
-    function myFunction() {
-        document.getElementById("hello").innerHTML = "안녕하세요"
-    }       
-</script>
+<body>  
+    <div id="hello">
+    <span>Hello, World!<button class="X" onclick="onView(false)">X</button></span>
+    </div>
+    <button class="but" onclick="onView(true)">누르기</button>
+    <!-- <div id="other" onclick="onView(false)">das</div> -->
+
+    <script> 
+        function onView(isOn){
+            document.getElementById("hello").style.display = isOn ? "block" : "none";
+        }
+    </script>
 </body>
 </html>
