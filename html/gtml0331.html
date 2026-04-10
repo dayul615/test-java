@@ -1,53 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        html,
-        body{
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-        }
-        div{
-            background-color: antiquewhite;
-            margin: 5px;
-        }
-        #hello{
-            display: none;
-        }
-        #other{
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        button{
-            background-color: brown;
-            
-        }
-        .but{
-            float: left;
-        }
-        .X{
-            float: right;
-        }
-    </style>
-</head>
-<body>  
-    <div id="hello">
-    <span>Hello, World!<button class="X" onclick="onView(false)">X</button></span>
-    </div>
-    <button class="but" onclick="onView(true)">누르기</button>
-    <!-- <div id="other" onclick="onView(false)">das</div> -->
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+      }
 
-    <script> 
-        function onView(isOn){
-            document.getElementById("hello").style.display = isOn ? "block" : "none";
-        }
+      div {
+        background-color: rgb(105, 128, 0);
+        margin: 5px;
+      }
+
+      .hello {
+        background-color: rgb(251, 252, 250);
+        display: none;
+      }
+
+      #close {
+        float: right;
+        margin-right: 10px;
+      }
+
+      button {
+        background-color: rgb(243, 39, 12);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hello">
+      <div>
+        홀리 ! 유 슈드 체크 인 온 섬 오브 더즈 필드 빌로우.
+        <button id="close" onclick="onView(false)">X</button>
+      </div>
+    </div>
+    <button id="clicker">누르기</button>
+
+    <script>
+      document.getElementById("clicker").addEventListener("click", function(){onView(true)});
+
+      function onView(isOn) {
+        console.log(isOn);
+        document.getElementsByClassName("hello")[0].style.display = isOn
+          ? "block"
+          : "none";
+      }
     </script>
-</body>
+  </body>
 </html>
