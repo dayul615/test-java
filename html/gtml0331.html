@@ -32,24 +32,43 @@
         background-color: rgb(243, 39, 12);
       }
     </style>
+
   </head>
   <body>
-    <div class="hello">
-      <div>
-        홀리 ! 유 슈드 체크 인 온 섬 오브 더즈 필드 빌로우.
-        <button id="close" onclick="onView(false)">X</button>
-      </div>
-    </div>
+    <div id="hello"></div>
     <button id="clicker">누르기</button>
-
+  
     <script>
-      document.getElementById("clicker").addEventListener("click", function(){onView(true)});
-
+      document.getElementById("clicker").addEventListener("click", function() {
+        onView(true);
+      });
+  
       function onView(isOn) {
-        console.log(isOn);
-        document.getElementsByClassName("hello")[0].style.display = isOn
-          ? "block"
-          : "none";
+        if (!isOn) return;
+  
+        let tagArea = document.getElementById("hello");
+  
+        // 1. 새로운 div 한 줄 생성
+        let newBox = document.createElement("div");
+        newBox.style.marginBottom = "5px"; // 줄 간격 살짝 띄우기
+  
+        // 2. 텍스트 추가
+        let textSpan = document.createElement("span");
+        textSpan.innerHTML = "홀리 ! 유 슈드 체크 인 온 섬 오브 더즈 필드 빌로우. ";
+        
+        // 3. X 버튼 추가
+        let closeBtn = document.createElement("button");
+        closeBtn.innerHTML = "X";
+        
+        // 4. X 버튼 클릭 시 해당 줄 삭제 기능
+        closeBtn.onclick = function() {
+          newBox.remove();
+        };
+  
+        // 5. 조립 후 화면에 추가
+        newBox.appendChild(textSpan);
+        newBox.appendChild(closeBtn);
+        tagArea.appendChild(newBox);
       }
     </script>
   </body>
